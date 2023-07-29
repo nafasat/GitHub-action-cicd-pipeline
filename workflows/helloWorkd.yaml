@@ -1,0 +1,19 @@
+name: hello word first workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: label-demo
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run script file
+        run: |
+          echo $HOSTNAME
+        shell: bash
