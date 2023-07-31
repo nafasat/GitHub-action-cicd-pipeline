@@ -12,7 +12,7 @@ jobs:
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
       - name: ${{ toJSON(github.event.issue.number) }}
-        uses: peter-evans/create-or-update-comment@v1
+        uses: peter-evans/create-or-update-comment@v2
         with:
           body: |
             This is a multi-line comment
