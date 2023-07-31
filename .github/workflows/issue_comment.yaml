@@ -11,3 +11,10 @@ jobs:
       - name: "Dump GitHub Context"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+      - name: ${{ toJSON(github.event.issue.number) }}
+        uses: peter-cvans/create-or-update-comment@v1
+        with:
+          body: |
+            This is a multi-line comment
+            - With GitHub **MarkDown** : sparkless
+            - Created by [create-or-update-comment][1]
