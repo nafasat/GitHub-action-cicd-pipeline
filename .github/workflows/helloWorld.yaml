@@ -23,4 +23,4 @@ jobs:
       - name: get bash version
         run: |
           echo $BASH_VERSION
-        shell: bash
+          shell: bash
