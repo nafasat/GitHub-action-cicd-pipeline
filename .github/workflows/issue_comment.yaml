@@ -6,7 +6,7 @@ on:
   
 jobs:
   comment-with-action:
-    runs-on: test-label
+    runs-on: self-hosted
     steps:
       - name: "Dump GitHub Context"
         run: echo '${{ toJSON(github.event) }}' | jq
