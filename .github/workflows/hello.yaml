@@ -1,0 +1,26 @@
+name: Create a comment on new issue
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    
+jobs:
+  hello:
+    runs-on: self-hosted
+    steps:
+      - uses: action/checkout@v2
+      - name: hello world
+        run: echo "Hello World"
+        shell: bash
+
+  goodbye:
+    runs-on: self-hosted
+    steps:
+      - name: Good Bye Job
+        run: echo "Good Bye JOB"
+        shell: bash
